@@ -3,3 +3,4 @@ platforms/*/
 !platforms/*.json
 plugins/*/
 !plugins/*.json
+npm-debug.log
