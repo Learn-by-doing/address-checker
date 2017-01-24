@@ -4,7 +4,7 @@
     <description>
         Mobile app to scan QR code and show current bitcoin balance.
     </description>
-    <author email="dev@cordova.apache.org" href="http://cordova.io">
+    <author email="" href="https://github.com/Learn-by-doing/address-checker/">
         BitStarter Team
     </author>
     <content src="index.html" />
