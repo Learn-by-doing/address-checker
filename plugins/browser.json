@@ -7,6 +7,9 @@
         "files": {}
     },
     "installed_plugins": {
+        "phonegap-plugin-barcodescanner": {
+            "PACKAGE_NAME": "io.cordova.hellocordova"
+        },
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "io.cordova.hellocordova"
         },
