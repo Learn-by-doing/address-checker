@@ -18,9 +18,49 @@
     "phonegap-plugin-barcodescanner": {
         "source": {
             "type": "registry",
-            "id": "phonegap-plugin-barcodescanner"
+            "id": "phonegap-plugin-barcodescanner@~6.0.5"
         },
         "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-compat": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-compat"
+        },
+        "is_top_level": false,
+        "variables": {}
+    },
+    "cordova-plugin-mfp": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-mfp"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-device": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-device"
+        },
+        "is_top_level": false,
+        "variables": {}
+    },
+    "cordova-plugin-globalization": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-globalization"
+        },
+        "is_top_level": false,
+        "variables": {}
+    },
+    "cordova-plugin-okhttp": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-okhttp"
+        },
+        "is_top_level": false,
         "variables": {}
     }
 }

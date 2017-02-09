@@ -1,10 +1,33 @@
+function queryvalue(key){
+	
+	var uri = 'https://blockchain.info/multiaddr?active='+key;
+//will looks like https://blockchain.info/multiaddr?active=1NKedaxCMRjEo9kdjVUW3Yd9nEes4hStUL
+	var resourceRequest = new WLResourceRequest(
+    		uri,
+    		WLResourceRequest.GET
+		);
+	
+	resourceRequest.send().then(
+    	function(response){
+    		amount = response.responseJSON.addresses[0].final_balance;
+    		alert(" amount is " + amount/100000 + "mBTC");
+
+    	},
+    	function(response){
+    		alert("request failed: "+ response.errorMsg)
+    	}
+	)
+	}
+
+
 function scan() {
 	cordova.plugins.barcodeScanner.scan(
 		function(result) {
-			alert("We got a barcode\n" +
-				"Result: " + result.text + "\n" +
-				"Format: " + result.format + "\n" +
-				"Cancelled: " + result.cancelled);
+//			alert("We got a barcode\n" +
+//				"Result: " + result.text + "\n" +
+//				"Format: " + result.format + "\n" +
+//				"Cancelled: " + result.cancelled);
+			queryvalue(result.text);
 		},
 		function(error) {
 			alert("Scanning failed: " + error);
@@ -21,3 +44,4 @@ function scan() {
 		}
 	);
 }
+
