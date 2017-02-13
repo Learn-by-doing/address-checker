@@ -1,10 +1,37 @@
+function query_bc (code, cb)
+{
+	var url_v = "https://blockchain.info/multiaddr?active="+code;
+
+	jQuery.ajax({ 
+		url : url_v,
+		jsonp : false, 
+		dataType : 'json',
+		error : function() {
+			alert("Errr is occured");
+		}
+	})
+	.then(function(data, status, xhr){
+			amount = data.addresses[0].final_balance;
+    		cb (null, amount);
+		}
+	)
+	.fail(function(xhr, err) { 
+		cb(err);
+	});
+}
+
+
 function scan() {
 	cordova.plugins.barcodeScanner.scan(
 		function(result) {
-			alert("We got a barcode\n" +
-				"Result: " + result.text + "\n" +
-				"Format: " + result.format + "\n" +
-				"Cancelled: " + result.cancelled);
+			query_bc(result.text, function (message, final_balance){
+				if (message){
+					alert (message);
+				}
+				else {
+					alert(" amount is " + amount/100000 + " mBTC");
+				}
+			} );			
 		},
 		function(error) {
 			alert("Scanning failed: " + error);
