@@ -4,3 +4,4 @@ platforms/*/
 plugins/*/
 !plugins/*.json
 npm-debug.log
+.idea/
